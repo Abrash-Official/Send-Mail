@@ -67,7 +67,7 @@ if ($_POST) {
                 
             // Recipients
             $mail->setFrom('noreply@scentview.pk', 'Perfume Store Order');
-            $mail->addAddress('abrasharshad7@gmail.com'); // Send to your Gmail
+            $mail->addAddress('your-email@example.com'); // Replace with your email address
             $mail->addReplyTo($email, $fullName);
                 
                 // Content
@@ -132,7 +132,7 @@ if ($_POST) {
         // Final fallback: Use pure PHP mail() function
         if (!$sent) {
             try {
-                $to = 'abrasharshad7@gmail.com';
+                $to = 'your-email@example.com';
                 $subject = 'New Perfume Order from ' . $fullName;
                 $plainTextBody = strip_tags(str_replace('<br>', "\n", $emailBody));
                 
